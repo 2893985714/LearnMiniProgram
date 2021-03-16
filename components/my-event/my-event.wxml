@@ -1,0 +1,2 @@
+
+<button size="mini" bind:tap="handlezengjia">+1</button>

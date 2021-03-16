@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/wxs/wxs",
+    "pages/wxml/wxml",
+    "pages/scroll/scroll",
+    "pages/input/input",
+    "pages/image/image",
+    "pages/view/view",
+    "pages/button/button",
+    "pages/home/home",
+    "pages/actegory/actegory",
+    "pages/about/about",
+    "pages/profile/profile",
+    "pages/text/text",
+    "pages2/wxs",
+    "components/my-cpn/my-cpn",
+    "components/cpn/cpn",
+    "components/my-prop/my-prop",
+    "components/my-event/my-event",
+    "components/my-sel/my-sel",
+    "components/tab-control/tab-control",
+    "components/my-slot/my-slot",
+    "components/my-mslot/my-mslot"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ff5777",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "我的小程序",
+    "backgroundColor": "#000",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#ff5777",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "assets/images/tabbar/home.png",
+        "selectedIconPath": "assets/images/tabbar/home_active.png"
+      },
+      {
+        "pagePath": "pages/actegory/actegory",
+        "text": "分类",
+        "iconPath": "assets/images/tabbar/category.png",
+        "selectedIconPath": "assets/images/tabbar/category_active.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "assets/images/tabbar/cart.png",
+        "selectedIconPath": "assets/images/tabbar/cart_active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "assets/images/tabbar/profile.png",
+        "selectedIconPath": "assets/images/tabbar/profile_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

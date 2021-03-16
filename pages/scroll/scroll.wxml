@@ -1,0 +1,15 @@
+<!-- 1、水平滚动：scroll-x -->
+<!-- view是块级元素 -->
+<scroll-view class="constainer1" scroll-x bindscroll="handleshuiping">
+  <view wx:for="{{10}}" class="item1">{{item}}</view>
+</scroll-view>
+
+<!-- 2、垂直滚动  scroll-y   -->
+<scroll-view class="constainer2" scroll-y>
+  <view wx:for="{{10}}" class="item2"></view>
+</scroll-view>
+
+<!-- 3、其他补充 滚动坐标     bindscroll-->
+<scroll-view class="constainer2" scroll-y bindscroll="handlescroll">
+  <view wx:for="{{10}}" class="item2"></view>
+</scroll-view>

@@ -1,0 +1,53 @@
+<!--pages/home/home.wxml-->
+<!-- 1.小程序的数据绑定:{{}} -->
+<!-- <view>你好 {{name}}</view>
+<view>年龄{{age }}</view> -->
+
+<!-- 2.列表展示 -->
+<!-- <view wx:for="{{studen}}">{{item.name}}--{{item.age}}</view> -->
+
+<!-- 3.时间监听改变data -->
+<!-- <view>当前计数：{{counter}}</view>
+<button size='mini' bindtap="jia">+</button>
+<button size="mini" bindtap="jian">-</button> -->
+<!-- <view>你好我是第一个小程程</view> -->
+
+<!-- 1.时间处理的回顾 -->
+<button bindtap="handleBunClick" size="mini">按钮</button>
+<button bind:tap="handleBunClick" size="mini">按钮</button>
+<button catch:tap="c" size="mini">按钮</button>
+
+<!-- 2.常见的一些事件 -->
+<!--
+      手指开始触摸：touchstart
+      手指触摸后移动：touchmove
+      手指触摸结束：touchend
+      手指触摸后马上离开：tap
+      手指触摸后，超过350ms在离开，（推荐使用longpress事件代替）：longpress -->
+<view class="box"
+      bind:touchstart="handlTouchstart"
+      bind:touchmove="handleTouchmove"
+      bind:touchend="handleTouchend"
+      bind:tap="handleTap"
+      bind:longpress="handleLongpress">
+</view>
+
+<!-- 3. 事件的传递参数-->
+<view class="container">
+      <block wx:for="{{title}}" wx:key="{{index}}">
+         <view class="item"
+            bindtap="handleItemClick"
+            data-index="{{index}}"
+            data-item="{{item}}"     
+         >{{item}}</view>
+      </block>
+</view>
+
+<!-- 4.事件冒泡和事件捕获 -->
+<!-- bind:一层层传递 -->
+<!-- catch:阻止时间的进一步传递 -->
+<view class="view1" capture-bind:tap="handleCatureView1" bindtap="handleBindView1">
+      <view class="view2" capture-catch:tap="handleCatureView2" bindtap="handleBindView2">
+        <view class="view3" capture-bind:tap="handleCatureView3" bindtap="handleBindView3"></view>
+      </view>
+</view>

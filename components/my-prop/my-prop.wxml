@@ -1,0 +1,5 @@
+<!-- 给自定义组件传递数据 -->
+<view class="text1  titleclass">{{title}}</view>
+<view class="view1">我是组件内容</view>
+
+

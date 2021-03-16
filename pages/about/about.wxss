@@ -1,0 +1,14 @@
+/* pages/about/about.wxss */
+
+.text1{
+  font-size: 64rpx;
+}
+.view1{
+  font-size: 32rpx;
+}
+.red{
+  color: red;
+}
+.ff{
+  color: blueviolet;
+}

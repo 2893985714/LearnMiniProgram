@@ -1,0 +1,35 @@
+<!-- image基本使用 -->
+ <!-- 重点：
+      1、image组件可以写成单标签，也可以写成双标签
+      2、image组件默认有自己的大小：320x240
+      3、image组件是一个行内块级元素(inline-block)
+      -->
+    <image/>
+    <view>dsaasgag</view>
+
+    <!-- 2、src:本地路径(相对路径/绝对路径) /远程地址) -->
+    <image src="../../assets/images/dongman/15.png"/>  <!-- 相对路径 -->
+    <image src="/assets/images/dongman/15.png"/>  <!-- 绝对路径 -->
+
+     <image src="https://huyaimg.msstatic.com/cdnimage/gamebanner/phpGAkyWd1609838608.jpg"/><!--远程地址 -->
+     <!-- 选着相册中的图片或者拍照 -->
+     <button bindtap="handle">选中图片</button>
+     <image src="{{imagePath}}"/>
+
+<!--3、bindload：监听图片加载完成  -->
+<!-- lazy-load:图片的懒加载 -->
+<image wx:for="{{2}}" 
+  src="https://huyaimg.msstatic.com/avatar/1016/b9/b6824c9d5593f03f5b5c4f71189023_180_135.jpg?1564815405"
+  bindload="handleimage"
+  lazy-load/>
+
+  <!-- 4、show-menu-by-longpress: 长按图片出现识别小程序码-->
+ <image show-menu-by-longpress
+         src="https://huyaimg.msstatic.com/avatar/1013/55/3f131463b1c7b943fee49f74fa596e_180_135.jpg?1567413967"
+         />
+   <view class="section section_gap" wx:for="{{array}}" wx:for-item="item">
+      <view class="section__title">{{item.text}}</view>
+      <view class="section__ctn">
+        <image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{src}}"></image>
+      </view>
+    </view>
